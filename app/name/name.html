@@ -1,0 +1,9 @@
+<label>First Name</label>
+<input type="text" ng-model="$ctrl.firstName" placeholder="Jesse">
+<br>
+<label>Last Name</label>
+<input type="text" ng-model="$ctrl.lastName" placeholder="Jones">
+<br>
+<button ng-click="$ctrl.buttonClick()">Submit</button>
+
+<h1 ng-hide="$ctrl.clicked" >Hello {{$ctrl.firstName}} {{$ctrl.lastName}}!</h1>
