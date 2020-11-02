@@ -4,8 +4,10 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.name',
     'myApp.version'
-]).
-    config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+])
+.config(['$locationProvider', '$routeProvider',
+    function ($locationProvider: angular.ILocationProvider,
+              $routeProvider: angular.route.IRouteProvider) {
         $locationProvider.hashPrefix('!');
         $routeProvider
         .when('/', {
@@ -13,4 +15,3 @@ angular.module('myApp', [
         })
         .otherwise({ redirectTo: '/' });
     }]);
-//# sourceMappingURL=app.js.map
